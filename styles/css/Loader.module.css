@@ -1,0 +1,5 @@
+.root {
+  &[data-variant="ecom"] {
+    --loader-color: hsl(var(--primary));
+  }
+}

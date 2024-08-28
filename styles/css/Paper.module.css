@@ -1,0 +1,7 @@
+.root {
+  &[data-variant="ecom"] {
+    background: white;
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--mantine-shadow-sm);
+  }
+}

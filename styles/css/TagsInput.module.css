@@ -1,0 +1,7 @@
+.root {
+  &[data-variant="ecom"] {
+    .pill {
+      background: hsl(var(--secondary));
+    }
+  }
+}

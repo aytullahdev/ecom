@@ -1,0 +1,15 @@
+.header {
+  &[data-variant="ecom"] {
+    background-color: hsl(var(--background));
+    border-color: hsl(var(--border));
+  }
+}
+
+.navbar {
+  &[data-variant="ecom"] {
+    /* background-color: #fff; */
+    /* border: 0; */
+    background: hsl(var(--secondary) / 0.25);
+    border-right: 1px solid hsl(var(--border));
+  }
+}

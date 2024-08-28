@@ -1,0 +1,6 @@
+.root {
+  font-weight: 600;
+  &[data-variant="ecom-primary"] {
+    color: hsl(var(--primary-foreground));
+  }
+}

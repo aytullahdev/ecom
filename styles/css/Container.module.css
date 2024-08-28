@@ -1,0 +1,5 @@
+.root {
+  &[data-variant="ecom"] {
+    --container-size-xl: 1280px;
+  }
+}

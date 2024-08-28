@@ -1,0 +1,36 @@
+.root {
+  &[data-variant="ecom"] {
+    color: hsl(var(--foreground) / 0.85);
+    border-radius: var(--mantine-radius-md);
+    background: transparent;
+    font-weight: 600;
+    height: 40px;
+    &[data-active="true"] {
+      @mixin light {
+        background: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+      }
+      @mixin dark {
+        background: hsl(var(--secondary));
+        color: hsl(var(--foreground));
+      }
+    }
+    &:hover {
+      color: hsl(var(--foreground));
+      background: hsl(var(--secondary));
+    }
+    transition: all 0.2s;
+  }
+
+  &[data-variant="ecom-secondary"] {
+    color: hsl(var(--foreground) / 0.85);
+    border-radius: var(--mantine-radius-md);
+    background: hsl(var(--primary) / 0.1);
+    font-weight: 600;
+    height: 40px;
+    &:hover {
+      color: hsl(var(--foreground));
+    }
+    transition: all 0.2s;
+  }
+}

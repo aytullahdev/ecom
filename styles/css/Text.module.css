@@ -1,0 +1,14 @@
+.root {
+  &[data-variant="ecom"] {
+    color: hsl(var(--foreground) / 0.75);
+  }
+  &[data-variant="ecom-muted"] {
+    color: hsl(var(--muted-foreground));
+  }
+  &[data-variant="ecom-strong"] {
+    color: hsl(var(--foreground));
+  }
+  &[data-variant="ecom-primary"] {
+    color: hsl(var(--primary-foreground));
+  }
+}

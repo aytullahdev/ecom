@@ -1,0 +1,23 @@
+.tab {
+  --tabs-color: hsl(var(--primary));
+  /* --_tab-hover-color: hsl(var(--secondary)); */
+  --_tab-hover-color: white;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  &[data-active="true"] {
+    color: hsl(var(--primary));
+  }
+
+  &[data-variant="pills"] {
+    color: hsl(var(--foreground));
+    font-weight: 500;
+    &[data-active="true"] {
+      background: hsl(var(--primary) / 0.1);
+      color: hsl(var(--primary));
+    }
+  }
+}
+
+.list {
+  --_tab-border-color: hsl(var(--secondary));
+}

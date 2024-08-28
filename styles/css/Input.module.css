@@ -1,0 +1,14 @@
+.input {
+  &[data-variant="ecom"] {
+    border: 1px solid;
+    border-color: hsl(var(--border));
+    background: white;
+    min-height: 44px;
+    &:focus {
+      border-color: hsl(var(--primary));
+    }
+    &::placeholder {
+      color: hsl(var(--muted-foreground));
+    }
+  }
+}
