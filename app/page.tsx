@@ -6,13 +6,7 @@ export default function Home() {
   return (
     <>
       <Box>
-        <Button
-          onClick={() => {
-            showErrorNotification("hello");
-          }}
-        >
-          Click me
-        </Button>
+       Home
       </Box>
     </>
   );

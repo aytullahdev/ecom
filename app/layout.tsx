@@ -8,6 +8,7 @@ import "@mantine/dropzone/styles.css";
 import "@mantine/spotlight/styles.css";
 import "@mantine/code-highlight/styles.css";
 import "../styles/globals.css";
+import Layout from "@/component/Layout";
 
 export default function RootLayout({
   children,
@@ -22,7 +23,9 @@ export default function RootLayout({
       <body>
         <MantineProvider theme={{ ...theme }} cssVariablesResolver={resolver}>
           <Notifications position="top-center" />
-          <Provider>{children}</Provider>
+          <Provider>
+            <Layout>{children}</Layout>
+          </Provider>
         </MantineProvider>
       </body>
     </html>
