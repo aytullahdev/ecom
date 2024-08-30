@@ -44,7 +44,8 @@
   },
   "release-it": {
     "git": {
-      "commitMessage": "chore: release ${version}"
+      "commitMessage": "chore: release ${version}",
+      "requireUpstream": false
     },
     "github": {
       "release": true,
