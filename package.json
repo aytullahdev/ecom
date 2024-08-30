@@ -44,13 +44,20 @@
   },
   "release-it": {
     "git": {
-      "commitMessage": "chore: release ${version}"
+      "commitMessage": "chore: release ${version}",
+      "requireBranch": "main"
     },
     "github": {
       "release": true
     },
     "npm": {
       "publish": false
+    },
+    "hooks": {
+      "before:init": [
+        "git pull",
+        "npm run lint"
+      ]
     },
     "plugins": {
       "@release-it/conventional-changelog": {
