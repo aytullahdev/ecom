@@ -1,6 +1,6 @@
 {
   "name": "ecom",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -45,7 +45,9 @@
   "release-it": {
     "git": {
       "commitMessage": "chore: release ${version}",
-      "requireUpstream": false
+      "tagName": "v${version}",
+      "push": false,
+      "requireCleanWorkingDir": false
     },
     "github": {
       "release": true,
