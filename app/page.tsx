@@ -1,13 +1,10 @@
-"use client";
-import { showErrorNotification } from "@/utils/notifications";
-import { Box, Button } from "@mantine/core";
+
+import Hero from "@/component/Hero";
 
 export default function Home() {
   return (
     <>
-      <Box>
-       Home
-      </Box>
+      <Hero />
     </>
   );
 }
