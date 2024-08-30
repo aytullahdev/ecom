@@ -24,7 +24,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <Container mx="auto">
           <TopSearchBar />
         </Container>
-        <Divider size={"xs"} pb="xs" />
+        <Divider size={"xs"} />
         <Container mx="auto">
           <MenuBar />
         </Container>

@@ -1,36 +1,81 @@
 {
   "name": "ecom",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky",
+    "release": "release-it"
   },
   "dependencies": {
     "@mantine/code-highlight": "^7.12.1",
     "@mantine/core": "^7.12.1",
+    "@mantine/dropzone": "^7.12.1",
     "@mantine/hooks": "^7.12.1",
     "@mantine/modals": "^7.12.1",
     "@mantine/notifications": "^7.12.1",
     "@mantine/spotlight": "^7.12.1",
     "@tabler/icons-react": "^3.14.0",
     "@tanstack/react-query": "^5.52.2",
+    "axios": "^1.7.5",
     "next": "^14.2.7",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "@release-it/conventional-changelog": "^8.0.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.7",
+    "husky": "^9.1.5",
     "postcss": "^8.4.41",
     "postcss-preset-mantine": "^1.17.0",
     "postcss-simple-vars": "^7.0.1",
+    "release-it": "^17.6.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "requireBranch": "main"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "hooks": {
+      "before:init": [
+        "git pull",
+        "npm run lint"
+      ]
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            }
+          ]
+        }
+      }
+    }
   }
 }
