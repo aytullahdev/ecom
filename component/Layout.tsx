@@ -10,6 +10,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import MenuBar from "./MenuBar";
 import TopSearchBar from "./TopSearhBar";
+// import Footer from "./Footer";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [opened, { toggle }] = useDisclosure();
@@ -18,6 +19,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <AppShell
       header={{ height: 90 }}
       navbar={{ width: 300, breakpoint: "sm", collapsed: { mobile: !opened } }}
+      footer={{ height: 200 }}
       padding="md"
     >
       <AppShell.Header>
@@ -31,6 +33,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </AppShell.Header>
 
       <AppShell.Main>{children}</AppShell.Main>
+      {/* <AppShell.Footer>
+        <Container mx="auto">
+          <Footer/>
+        </Container>
+      </AppShell.Footer> */}
     </AppShell>
   );
 };
