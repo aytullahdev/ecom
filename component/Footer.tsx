@@ -6,7 +6,9 @@ import Link from 'next/link';
 
 const footerData = [
   {
+
     title: 'Wanted',
+
     links: [
       { label: 'About us', link: '#' },
       { label: 'Jobs', link: '#' },
@@ -45,6 +47,7 @@ export function Footer() {
             component="a"
             href={link.link}
             onClick={(event) => event.preventDefault()}
+
             c="dimmed"
             fz="sm"
           >
@@ -100,10 +103,11 @@ export function Footer() {
           </Group>
           <Group spacing="xs">
             <Link href="https://apps.apple.com/app/apple-store/id" passHref>
-              <Image src="/google-play-store.png" width={135} height={40} alt="Download on the App Store" />
+
+              <Image src="/api/placeholder/135/40" width={135} height={40} alt="Download on the App Store" />
             </Link>
             <Link href="https://play.google.com/store/apps/details?id=" passHref>
-              <Image src="/app-store-logo.png" width={135} height={40} alt="Get it on Google Play" />
+              <Image src="/api/placeholder/135/40" width={135} height={40} alt="Get it on Google Play" />
             </Link>
           </Group>
         </Flex>
