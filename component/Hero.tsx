@@ -1,12 +1,5 @@
-import {
-  Container,
-  Title,
-  Text,
-  Button,
-  Box,
-  BackgroundImage,
-  Flex,
-} from "@mantine/core";
+import React from "react";
+import { Container, Title, Button, BackgroundImage, Flex } from "@mantine/core";
 
 export default function Hero() {
   return (
@@ -19,7 +12,6 @@ export default function Hero() {
         h={500}
         w={"100%"}
         pos={"relative"}
-
       >
         <Container
           bg={"white"}
@@ -41,13 +33,16 @@ export default function Hero() {
           style={{
             borderRadius: "10px",
           }}
-          
         >
-          <Title order={1} fz={{
-            xs: "20px",
-            sm: "28px",
-          }}
-          >Sell your clothes and earn money</Title>
+          <Title
+            order={1}
+            fz={{
+              xs: "20px",
+              sm: "28px",
+            }}
+          >
+            Sell your clothes and earn money
+          </Title>
           <Button mt={20} fullWidth>
             Sell Now
           </Button>

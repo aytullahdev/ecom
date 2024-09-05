@@ -1,18 +1,15 @@
 "use client";
+import React from "react"; // Add this line to import React
 import { Footer } from "@/component/Footer";
-import { showErrorNotification } from "@/utils/notifications";
-import { Box, Button } from "@mantine/core";
+import { Box } from "@mantine/core";
 import Hero from "@/component/Hero";
 import ProductCard from "@/component/ProductCard";
 import { Grid, GridCol } from "@mantine/core";
 
-
 export default function Home() {
   return (
     <>
-      <Box>
-       Home
-      </Box>
+      <Box>Home</Box>
       <Hero />
       <Grid mt={28}>
         {[...Array(8)].map((_, index) => (
@@ -22,7 +19,6 @@ export default function Home() {
         ))}
       </Grid>
       <Footer />
-
     </>
   );
 }

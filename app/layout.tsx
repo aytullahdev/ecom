@@ -9,7 +9,7 @@ import "@mantine/code-highlight/styles.css";
 import "../styles/globals.css";
 import Layout from "@/component/Layout";
 import React from "react";
-
+import Footer from "@/component/Footer";
 
 export default function RootLayout({
   children,
@@ -26,7 +26,6 @@ export default function RootLayout({
           <Notifications position="top-center" />
           <Provider>
             <Layout>{children}</Layout>
-            <Footer />
           </Provider>
         </MantineProvider>
       </body>
