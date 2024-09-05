@@ -8,7 +8,8 @@ import "@mantine/spotlight/styles.css";
 import "@mantine/code-highlight/styles.css";
 import "../styles/globals.css";
 import Layout from "@/component/Layout";
-import Footer from "@/component/Footer";
+import React from "react";
+
 
 export default function RootLayout({
   children,
